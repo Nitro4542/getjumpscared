@@ -21,4 +21,8 @@ pip install comtypes
 
 Just run the Powershell script.  
 
-Please note that you'll need non-restricted internet access for it to work.
+Please note that you'll need non-restricted internet access for it to work.  
+
+## How to make it seem more legit
+
+Feel free to change the folder where it will be installed to something else.  
