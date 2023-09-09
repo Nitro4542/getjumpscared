@@ -11,6 +11,7 @@ $jumpscareScript = @"
 import cv2
 import pygame
 import ctypes
+import os
 from ctypes import cast, POINTER
 from comtypes import CLSCTX_ALL
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
@@ -23,8 +24,8 @@ volume.SetMasterVolumeLevel(0.0, None)
 
 # Play video
 # Path to the video & audio
-video_path = 'js_video.mp4'
-audio_path = 'js_audio.mp3'
+video_path = os.getenv("TEMP") + "\jumpscare\js_video.mp4"
+audio_path = os.getenv("TEMP") + "\jumpscare\js_audio.mp3"
 # Create a VideoCapture object
 cap = cv2.VideoCapture(video_path)
 
@@ -79,15 +80,15 @@ if ($pythonPath) {
     $jumpscareScript | Set-Content -Path "$($env:TEMP)\jumpscare\jumpscare.py"
 
     # Downloads the audio and video (if the don't exist yet)
-    if (!(Test-Path -Path "$($env:TEMP)\jumpscare\js_video.mp4")) {
+    if (!(Test-Path -Path "$($env:TEMP)\jumpscare\js_video.mp4" -PathType Leaf)) {
         Invoke-WebRequest -Uri "https://drive.google.com/uc?id=1s05xleLbvTAPvPqZ4eA0lMznq6GNv0FS&export=download" -OutFile "$($env:TEMP)\jumpscare\js_video.mp4"
     }
-    if (!(Test-Path -Path "$($env:TEMP)\jumpscare\js_video.mp3")) {
+    if (!(Test-Path -Path "$($env:TEMP)\jumpscare\js_video.mp3" -PathType Leaf -IsValid)) {
         Invoke-WebRequest -Uri "https://drive.google.com/uc?id=1ff7O0DQD1PqvKC1l9tfxRAx3RieQbNBm&export=download" -OutFile "$($env:TEMP)\jumpscare\js_audio.mp3"
     }
 
     # Run jumpscare script
-    cmd /c "python $($env:TEMP)\jumpscare\jumpscare.py"
+    python "$($env:TEMP)\jumpscare\jumpscare.py"
 }
 else {
     Write-Host "Please install the latest version of Python to continue."

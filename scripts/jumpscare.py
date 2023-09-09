@@ -5,6 +5,7 @@
 import cv2
 import pygame
 import ctypes
+import os
 from ctypes import cast, POINTER
 from comtypes import CLSCTX_ALL
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
@@ -17,8 +18,8 @@ volume.SetMasterVolumeLevel(0.0, None)
 
 # Play video
 # Path to the video & audio
-video_path = 'js_video.mp4'
-audio_path = 'js_audio.mp3'
+video_path = os.getenv("TEMP") + "\jumpscare\js_video.mp4"
+audio_path = os.getenv("TEMP") + "\jumpscare\js_audio.mp3"
 # Create a VideoCapture object
 cap = cv2.VideoCapture(video_path)
 
