@@ -23,7 +23,7 @@ Just run the Powershell script.
 
 Please note that you'll need non-restricted internet access for it to work.  
 
-You also need to change the jumpscare video and audio links for it to work.  
+You can also change the jumpscare video and audio links if you like.
 
 ## How does it work?
 
