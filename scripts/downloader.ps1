@@ -7,7 +7,6 @@ $jumpscareScript = @"
 # Attention: If you run this program, you will get jumpscared.
 # If you die from a heart attack I am not responsible.
 
-# Set volume to maximum
 import cv2
 import pygame
 import ctypes
@@ -16,11 +15,14 @@ from ctypes import cast, POINTER
 from comtypes import CLSCTX_ALL
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 
+# Needed to change the volume
 devices = AudioUtilities.GetSpeakers()
 interface = devices.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
 volume = cast(interface, POINTER(IAudioEndpointVolume))
 
+# Set volume to maximum and unmute
 volume.SetMasterVolumeLevel(0.0, None)
+volume.SetMute(0, None)
 
 # Play video
 # Path to the video & audio
@@ -64,7 +66,7 @@ cap.release()
 cv2.destroyAllWindows()
 "@
 
-# Install needed packages if python is installed (silent)
+# Install needed packages if Python is installed (silent)
 if ($pythonPath) {
     Write-Host "Installing... Do NOT close this window."
     cmd /c "echo "yes" | pip install opencv-python -q -q -q --exists-action i"
@@ -83,7 +85,7 @@ if ($pythonPath) {
     if (!(Test-Path -Path "$($env:TEMP)\jumpscare\js_video.mp4" -PathType Leaf)) {
         Invoke-WebRequest -Uri "https://drive.google.com/uc?id=1s05xleLbvTAPvPqZ4eA0lMznq6GNv0FS&export=download" -OutFile "$($env:TEMP)\jumpscare\js_video.mp4"
     }
-    if (!(Test-Path -Path "$($env:TEMP)\jumpscare\js_video.mp3" -PathType Leaf -IsValid)) {
+    if (!(Test-Path -Path "$($env:TEMP)\jumpscare\js_video.mp3" -PathType Leaf)) {
         Invoke-WebRequest -Uri "https://drive.google.com/uc?id=1ff7O0DQD1PqvKC1l9tfxRAx3RieQbNBm&export=download" -OutFile "$($env:TEMP)\jumpscare\js_audio.mp3"
     }
 
@@ -91,5 +93,6 @@ if ($pythonPath) {
     python "$($env:TEMP)\jumpscare\jumpscare.py"
 }
 else {
+    # Tells user to install Python.
     Write-Host "Please install the latest version of Python to continue."
 }

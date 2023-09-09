@@ -1,7 +1,6 @@
 # Attention: If you run this program, you will get jumpscared.
 # If you die from a heart attack I am not responsible.
 
-# Set volume to maximum
 import cv2
 import pygame
 import ctypes
@@ -10,11 +9,14 @@ from ctypes import cast, POINTER
 from comtypes import CLSCTX_ALL
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 
+# Needed to change the volume
 devices = AudioUtilities.GetSpeakers()
 interface = devices.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
 volume = cast(interface, POINTER(IAudioEndpointVolume))
 
+# Set volume to maximum and unmute
 volume.SetMasterVolumeLevel(0.0, None)
+volume.SetMute(0, None)
 
 # Play video
 # Path to the video & audio
