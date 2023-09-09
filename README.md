@@ -23,6 +23,26 @@ Just run the Powershell script.
 
 Please note that you'll need non-restricted internet access for it to work.  
 
+You also need to change the jumpscare video and audio links for it to work.  
+
+## How does it work?
+
+Here is everything the script does:  
+
+- Check if Python is installed  
+- If Python is installed, install opencv-python, pygame, pycaw and comtypes using pip  
+- Create a folder called "jumpscare" inside %temp% if it doesn't exist  
+- Copy the python script to jumpscare.py inside %temp%\jumpscare  
+- Download an MP4 file for the jumpscare from Google Drive (if it doesn't exist)  
+- Download an MP3 file for the jumpscare from Google Drive (if it doesn't exist)  
+- Run the jumpscare.py script  
+
 ## How to make it seem more legit
 
 Feel free to change the folder where it will be installed to something else.  
+
+## How to Contribute
+
+You can help by fixing some bugs, create issues or create pull requests.  
+
+All though this is a project I made in 2 hours, help is highly appreciated!
