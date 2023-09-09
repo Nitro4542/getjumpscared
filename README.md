@@ -1,6 +1,6 @@
 # getjumpscared
 
-A single powershell script which will trigger a jumpscare, which was written in Python.  
+A single Powershell script which will trigger a jumpscare from Five Nights at Freddy's which was written in Python    
 
 I'm not sure if this works on Linux or Mac, because I obviously designed it for Windows.  
 
