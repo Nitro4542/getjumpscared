@@ -33,8 +33,8 @@ Here is everything the script does:
 - If Python is installed, install opencv-python, pygame, pycaw and comtypes using pip  
 - Create a folder called "jumpscare" inside %temp% if it doesn't exist  
 - Copy the python script to jumpscare.py inside %temp%\jumpscare  
-- Download an MP4 file for the jumpscare from Google Drive (if it doesn't exist)  
-- Download an MP3 file for the jumpscare from Google Drive (if it doesn't exist)  
+- Download an MP4 file for the jumpscare from this repository (if it doesn't exist in the temp folder)  
+- Download an MP3 file for the jumpscare from this repository (if it doesn't exist in the temp folder)  
 - Run the jumpscare.py script  
 
 ## How to make it seem more legit
