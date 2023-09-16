@@ -83,10 +83,10 @@ if ($pythonPath) {
 
     # Downloads the audio and video (if the don't exist yet)
     if (!(Test-Path -Path "$($env:TEMP)\jumpscare\js_video.mp4" -PathType Leaf)) {
-        Invoke-WebRequest -Uri "https://drive.google.com/uc?id=1s05xleLbvTAPvPqZ4eA0lMznq6GNv0FS&export=download" -OutFile "$($env:TEMP)\jumpscare\js_video.mp4"
+        Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Nitro4542/getjumpscared/main/media/js_video.mp4" -OutFile "$($env:TEMP)\jumpscare\js_video.mp4"
     }
     if (!(Test-Path -Path "$($env:TEMP)\jumpscare\js_video.mp3" -PathType Leaf)) {
-        Invoke-WebRequest -Uri "https://drive.google.com/uc?id=1ff7O0DQD1PqvKC1l9tfxRAx3RieQbNBm&export=download" -OutFile "$($env:TEMP)\jumpscare\js_audio.mp3"
+        Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Nitro4542/getjumpscared/main/media/js_audio.mp3" -OutFile "$($env:TEMP)\jumpscare\js_audio.mp3"
     }
 
     # Run jumpscare script
