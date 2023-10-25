@@ -46,3 +46,7 @@ Feel free to change the folder where it will be installed to something else.
 You can help by fixing some bugs, create issues or create pull requests.  
 
 All though this is a project I made in 2 hours, help is highly appreciated!
+
+## Disclaimer
+
+I am not responsible for any damage you do with this script.
