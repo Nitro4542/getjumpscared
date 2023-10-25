@@ -1,5 +1,5 @@
 # Attention: If you run this program, you will get jumpscared.
-# If you die from a heart attack I am not responsible.
+# If you die from a heart attack, I am not responsible.
 
 import cv2
 import pygame
@@ -20,8 +20,8 @@ volume.SetMute(0, None)
 
 # Play video
 # Path to the video & audio
-video_path = os.getenv("TEMP") + "\jumpscare\js_video.mp4"
-audio_path = os.getenv("TEMP") + "\jumpscare\js_audio.mp3"
+video_path = os.getenv("TEMP") + "\\jumpscare\\js_video.mp4"
+audio_path = os.getenv("TEMP") + "\\jumpscare\\js_audio.mp3"
 # Create a VideoCapture object
 cap = cv2.VideoCapture(video_path)
 
