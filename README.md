@@ -1,8 +1,16 @@
-# getjumpscared
+<div align="center">
+    <img src="media/logo.png" width="192" height="192" style="display: block; margin: 0 auto"/>
+    <h1>getjumpscared</h1>
+    <p>A Powershell script which will trigger a jumpscare</p>
+</div>
 
-A single Powershell script which will trigger a jumpscare from Five Nights at Freddy's which was written in Python    
+## About   
 
-I'm not sure if this works on Linux or Mac, because I obviously designed it for Windows.  
+I'm not sure if this works on Linux or Mac, because I designed it for Windows. 
+
+The jumpscare was written in Python.  
+
+By default this script downloads a jumpscare inspired by Five Nights at Freddy's from this repository.
 
 ## Dependencies
 
@@ -46,3 +54,7 @@ Feel free to change the folder where it will be installed to something else.
 You can help by fixing some bugs, create issues or create pull requests.  
 
 All though this is a project I made in 2 hours, help is highly appreciated!
+
+## Disclaimer
+
+I am not responsible for any damage you do with this script.
