@@ -47,7 +47,7 @@ Here is everything the script does:
 
 ## How to make it seem more legit
 
-Feel free to change the folder where it will be installed to something else.  
+Feel free to change anything you might think could look suspicious.  
 
 ## How to Contribute
 
