@@ -33,6 +33,13 @@ Please note that you'll need non-restricted internet access for it to work.
 
 You can also change the jumpscare video and audio links if you like.
 
+### Run it with one line of code
+
+To download it from this repository and run it at the same time, run this command in Powershell:
+```powershell
+iex raw.githubusercontent.com/Nitro4542/getjumpscared/main/scripts/downloader.ps1 | iem
+```
+
 ## How does it work?
 
 Here is everything the script does:  
