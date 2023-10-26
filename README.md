@@ -37,7 +37,7 @@ You can also change the jumpscare video and audio links if you like.
 
 To download it from this repository and run it at the same time, run this command in Powershell:
 ```powershell
-iex raw.githubusercontent.com/Nitro4542/getjumpscared/main/scripts/downloader.ps1 | iem
+irm raw.githubusercontent.com/Nitro4542/getjumpscared/main/scripts/downloader.ps1 | iex
 ```
 
 ## How does it work?
